@@ -1,14 +1,13 @@
 package dataStractureProgecySemTwo;
 
-public class LinkedListQueue  
-	{  
+public class LinkedListQueue {
 	 private Node front, rear;  
 	 private int queueSize; // queue size  
 	    
 	 //linked list node  
 	 private class Node {  
-		 objectTasks data;  
-	 Node next;  
+		 Task data;  
+		 Node next;  
 	 }  
 	 //default constructor - initially front & rear are null; size=0; queue is empty  
 	 public LinkedListQueue()  
@@ -23,9 +22,9 @@ public class LinkedListQueue
 	 return (queueSize == 0);  
 	 }    
 	 //Remove item from the front of the queue.  
-	 public objectTasks dequeue()  
+	 public Task dequeue()  
 	 {  
-		 objectTasks data = front.data;  
+		 Task data = front.data;  
 	 front = front.next;  
 	 if (isEmpty())  
 	 {  
@@ -36,7 +35,7 @@ public class LinkedListQueue
 	 return data;  
 	 }  
 	 //Add data at the rear of the queue.  
-	 public void enqueue(objectTasks data)  
+	 public void enqueue(Task data)  
 	 {  
 	 Node oldRear = rear;  
 	 rear = new Node();  
@@ -57,7 +56,7 @@ public class LinkedListQueue
 	     System.out.println("Front of the queue:" + front.data  
 	     + " Rear of the queue:" + rear.data);  
 	 }  
-	 public objectTasks getRear() {
+	 public Task getFront() {
 		return front.data;
 	 }
 	 public  void printList()
@@ -69,11 +68,12 @@ public class LinkedListQueue
 	        // Traverse through the LinkedList
 	        while (temp != null) {
 	            // Print the data at current node
-	            System.out.print(temp.data.getNum3() + " ");
+	            System.out.print(temp.data.toString() + " ");
 	            // Go to next node
 	            temp = temp.next;
 	        }
 	        System.out.println();
 	    }
 	}  
+
 
